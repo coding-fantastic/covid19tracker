@@ -10,6 +10,15 @@ function App() {
   const [country , setCountry] = useState('worldwide') 
   const [countryInfo, setcountryInfo] = useState({})
 
+  useEffect(() =>{
+    fetch('https://disease.sh/v3/covid-19/all')
+      .then(response => response.json())
+      .then(data => {
+        setcountryInfo(data)
+      } )
+
+  }, [])
+
   // useEffect = runs a piece of code based on a given condition 
   useEffect( () => {
     const getCountriesData = async () => {
