@@ -3,9 +3,9 @@ export const sortData = (data) => {
 
     sortedData.sort((a, b) => {
         if (a.cases > b.cases){
-            return -1
+            return false
         } else {
-            return 1
+            return true
         }
     }  )
     return sortedData;
