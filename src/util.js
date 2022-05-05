@@ -1,12 +1,6 @@
 export const sortData = (data) => {
     const sortedData = [...data]
 
-    sortedData.sort((a, b) => {
-        if (a.cases > b.cases){
-            return false
-        } else {
-            return true
-        }
-    }  )
-    return sortedData;
+    return sortedData.sort((a, b) => (a.cases > b.cases ? -1 : 1) )
+    
 }
